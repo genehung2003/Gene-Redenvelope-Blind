@@ -126,14 +126,18 @@
                         </div>
                         <p className="text-red-200 text-base mb-4 opacity-90 font-bold tracking-wider">蒙著眼轉帳，全憑天意</p>
                         <div className="flex justify-center gap-3 mb-6">
-                            {[4, 5, 6].map(num => (
+                            {[
+                                { val: 4, label: "4季發財" },
+                                { val: 5, label: "5路財神" },
+                                { val: 6, label: "6六大順" }
+                            ].map(item => (
                                 <button 
-                                    key={num}
-                                    onClick={() => setDigitMode(num)}
+                                    key={item.val}
+                                    onClick={() => setDigitMode(item.val)}
                                     disabled={isRevealed}
-                                    className={`px-5 py-2 rounded-full text-sm font-black transition-all ${digitMode === num ? 'bg-yellow-500 text-red-900 shadow-[0_0_15px_rgba(234,179,8,0.4)] scale-105' : 'bg-red-900/40 text-red-300 border border-red-700 opacity-60 hover:opacity-100'}`}
+                                    className={`px-4 py-2 rounded-full text-sm font-black transition-all ${digitMode === item.val ? 'bg-yellow-500 text-red-900 shadow-[0_0_15px_rgba(234,179,8,0.4)] scale-105' : 'bg-red-900/40 text-red-300 border border-red-700 opacity-60 hover:opacity-100'}`}
                                 >
-                                    {num} 位數
+                                    {item.label}
                                 </button>
                             ))}
                         </div>

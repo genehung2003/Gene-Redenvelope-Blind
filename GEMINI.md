@@ -1,25 +1,22 @@
-# GS Open & Red Envelope Project
+# 紅包挑戰專案 (Red Envelope Challenge)
 
-## Project Overview
-This project contains a professional badminton tournament website ("GS Open") and a specialized interactive "Blind Red Envelope Challenge" for social events.
+## 專案簡介
+這是一個獨立的互動式網頁專案，專為節慶活動設計的「全盲紅包挑戰」。使用者在隱藏數字的鍵盤上盲抽，模擬轉帳過程，增加趣味性。
 
-## Red Envelope Challenge Features
-- **Theme**: 2026 Year of the Horse (Lunar New Year).
-- **Aesthetic**: French Open-inspired clay red and gold palette.
-- **Branding**: Watermarked with "成大外科小洪".
-- **Functionality**: 
-    - Simulates a LinePay transfer keypad.
-    - Fully random blind selection (no fixed logic, allows leading zeros for humor).
-    - Supports 4, 5, and 6-digit amounts.
-    - Lightweight CSS-based confetti effect upon reveal.
+## 核心功能
+- **全盲隨機性**：鍵盤位置每次點擊或重新開始都會隨機洗牌。
+- **笑點設計**：完全保留首位數字為 0 的可能性（例如抽到 $0,123）。
+- **多位數模式**：支持選擇 4 位、5 位或 6 位數挑戰。
+- **視覺效果**：
+    - 使用自定義透明背景圖片作為主題。
+    - 輕量化 CSS 粒子噴發特效。
+    - 類 LinePay 轉帳鍵盤設計。
+- **個人品牌**：右下角設有「成大外科小洪」浮水印。
 
-## User Preferences
-- **Aesthetic**: Professional, French Open-inspired.
-- **Deployment**: Automatically deploy to Firebase after every modification.
-- **Version Control**: Commit changes to Git before deploying.
-- **Content**: Professional French/Chinese content for sports, humorous/traditional for red envelopes.
+## 技術架構
+- **前端**：React 18 (經由 CDN 載入)。
+- **樣式**：Tailwind CSS (經由 CDN 載入)。
+- **部署建議**：單檔案架構，適合部署於 GitHub Pages 或任何靜態網頁空間。
 
-## Technical Details
-- **Framework**: React (Single File via CDN).
-- **Styling**: Tailwind CSS.
-- **Assets**: Custom no-background PNG for the main mascot/logo.
+## 開發紀錄
+- 2026-02-17：專案初始化，完成 4/5/6 位數邏輯與 UI 調整。
